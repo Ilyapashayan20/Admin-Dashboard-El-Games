@@ -1,19 +1,8 @@
 <template>
-<div class=" overflow-hidden">
-  <nav v-if="user">
 
-     
-   
-    <button @click="handleClick">Logout</button>
-  </nav>
-
-      <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
-        
-        
-      </aside>
-
-</div>
-
+  <div v-if="user">
+    <button  class=" bg-red-600 transition hover:bg-red-700 text-white font-normal px-2 pb-1 rounded" @click="handleClick">Logout</button>
+  </div>
  
 </template>
 

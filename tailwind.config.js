@@ -12,6 +12,9 @@ module.exports = {
         p:['16px','150%'],
         
     },
+    maxWidth: {
+      '220px': '220px',
+    },
   
     borderRadius: {
       'none': '0',
@@ -29,6 +32,9 @@ module.exports = {
       },
       width: {
         '114': '29.5rem',
+      },
+      colors: {
+        'blue-el-games': '#131C2E',
       },
       
     },

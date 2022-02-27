@@ -2,6 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import AdminPanel from '../views/AdminPanel.vue'
 import { projectAuth } from '../firebase/config'
+import Dashboard from '../components/Dashboard.vue'
+import Games from '../components/Games.vue'
+import Blog from '../components/Blog.vue'
+
 
 
 const requireAuth = (to,from,next) =>{
@@ -25,7 +29,24 @@ const routes = [
     path: '/admin-panel',
     name: 'Admin-Panel',
     component: AdminPanel,
-    beforeEnter: requireAuth
+    beforeEnter: requireAuth,
+    children:[
+      {
+        path: '/dashboard',
+        name: 'Dashboard',
+      component: Dashboard,
+      },
+      {
+        path: '/Games',
+        name: 'Games',
+      component: Games,
+      },
+      {
+        path: '/blog',
+        name: 'Blog',
+      component: Blog,
+      },
+    ]
   },
 ]
 

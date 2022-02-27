@@ -1,10 +1,18 @@
 <template>
-<div class=" overflow-hidden">
-  <Navbar />
+<div>
+ 
+  <SectionTop />
+  <div class="flex">
+    <Menu />
+    <BlockWindow />
+  </div>
+    
+ 
+  
 
 </div>
 
-<router-view />
+
 </template>
 
 
@@ -13,9 +21,11 @@
 import getUser from '../composables/getUser'
 import { watch } from 'vue'
 import { useRouter } from 'vue-router'
-import Navbar from '../components/Navbar.vue'
+import Menu from '../components/Menu.vue'
+import SectionTop from '../components/SectionTop.vue'
+import BlockWindow from "../views/BlockWindow.vue"
 export default {
-  components: { Navbar},
+  components: { Menu,SectionTop,BlockWindow},
   setup() {
     const router = useRouter()
     const { user } = getUser()
@@ -30,4 +40,7 @@ export default {
 </script>
 
 <style>
+body{
+  overflow: hidden;
+}
 </style>
