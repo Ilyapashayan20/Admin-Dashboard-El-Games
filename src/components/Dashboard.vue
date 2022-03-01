@@ -1,8 +1,7 @@
 <template>
-  <h1 class="">
-     Dashboard
-  </h1>
-  
+    <div class="welcome overflow-x-auto">
+    
+  </div>
 </template>
 
 <script>

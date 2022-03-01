@@ -5,6 +5,8 @@ import { projectAuth } from '../firebase/config'
 import Dashboard from '../components/Dashboard.vue'
 import Games from '../components/Games.vue'
 import Blog from '../components/Blog.vue'
+import About from '../components/About.vue'
+import Edit from '../components/Edit.vue'
 
 
 
@@ -46,6 +48,21 @@ const routes = [
         name: 'Blog',
       component: Blog,
       },
+      {
+        path: '/about',
+        name: 'About',
+      component: About,
+      children:[
+        {
+          path: '/edit/:id',
+          name: 'Edit',
+        component: Edit,
+          
+        }
+      ]
+      },
+    
+      
     ]
   },
 ]

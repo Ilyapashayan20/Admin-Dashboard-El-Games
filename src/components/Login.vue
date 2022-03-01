@@ -1,5 +1,11 @@
 <template>
-  <div class="flex items-center justify-center min-h-screen bg-white">
+
+
+<img class="absolute z-0" src="../images/svg/Torus.svg" alt="">
+<img class="absolute right-52 top-8" src="../images/svg/Ball.svg" alt="">
+<img class="absolute bottom-10 left-72" src="../images/svg/Polyhedron.svg" alt="">
+<img class="absolute bottom-32 right-0" src="../images/svg/Cube-2.svg" alt="">
+  <div class="flex items-center justify-center min-h-screen bg-red-700">
        <div class="px-8 py-6 mt-4 text-left bg-blue-el-games shadow-lg">
             <img src="../images/logo/logo2.svg" alt="">
             <form @submit.prevent="handleSubmit" class="mt-4">
@@ -15,6 +21,7 @@
             </form>
        </div>
   </div>
+ 
 </template>
 
 <script>
@@ -43,5 +50,18 @@ export default {
 </script>
 
 <style>
+@media (max-width:920px) {
+  .absolute{
+    display: none;
+  }
+  
+}
+@media (max-width:553px){
+  .flex{
+    padding: 0 40px;
+  }
+
+}
+
 
 </style>

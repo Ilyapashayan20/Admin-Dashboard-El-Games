@@ -12,7 +12,7 @@ export default {
     const router = useRouter()
 
     const enterAdmin = () => {
-      router.push({name: 'Admin-Panel'})
+      router.push({name: 'Dashboard'})
     }
 
     return {enterAdmin}

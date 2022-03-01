@@ -13,7 +13,8 @@ module.exports = {
         
     },
     maxWidth: {
-      '220px': '220px',
+      '220px': '360px',
+      'full': '100%',
     },
   
     borderRadius: {
@@ -35,6 +36,7 @@ module.exports = {
       },
       colors: {
         'blue-el-games': '#131C2E',
+        'bluee': '#2563eb',
       },
       
     },

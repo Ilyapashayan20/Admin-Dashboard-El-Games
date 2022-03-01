@@ -6,9 +6,6 @@
     <Menu />
     <BlockWindow />
   </div>
-    
- 
-  
 
 </div>
 

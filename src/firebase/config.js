@@ -1,6 +1,7 @@
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore'
 import 'firebase/compat/auth'
+import { ref,onUnmonted } from 'vue'
 
 const firebaseConfig = {
     apiKey: "AIzaSyBjQ1RyB1_cT6L_irXudEEj7EP-ePfD9b0",
@@ -15,7 +16,33 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 const projectAuth = firebase.auth()
-const projectFirestore = firebase.firestore()
+const db = firebase.firestore()
 const timestamp = firebase.firestore.FieldValue.serverTimestamp
+const aboutCollection = db.collection('abouts')
 
-export { projectAuth, projectFirestore, timestamp }
+export { projectAuth,  timestamp }
+
+export const createAbout = about =>{
+  return aboutCollection.add(about)
+}
+export const getAbout = async id =>{
+  const about = await aboutCollection.doc(id).get()
+  return about.exists ? about.data() : null
+}
+
+export const updateAbout = (id,about) =>{
+  return aboutCollection.doc(id).update(about)
+}
+
+export const deleteAbout = id =>{
+  return aboutCollection.doc(id).delete()
+}
+
+export const useLoadAbouts = () =>{
+  const abouts = ref([])
+   aboutCollection.onSnapshot(snapshot =>{
+    abouts.value =snapshot.docs.map(doc => ({id: doc.id, ...doc.data() }))
+  })
+  
+  return abouts 
+}
