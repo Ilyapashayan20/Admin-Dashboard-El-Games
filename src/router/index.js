@@ -7,6 +7,7 @@ import Games from '../components/Games.vue'
 import Blog from '../components/Blog.vue'
 import About from '../components/About.vue'
 import Edit from '../components/Edit.vue'
+import BlogsDetails from '../playlist/BlogsDetails.vue'
 
 
 
@@ -39,7 +40,7 @@ const routes = [
       component: Dashboard,
       },
       {
-        path: '/Games',
+        path: '/games',
         name: 'Games',
       component: Games,
       },
@@ -47,6 +48,7 @@ const routes = [
         path: '/blog',
         name: 'Blog',
       component: Blog,
+     
       },
       {
         path: '/about',
@@ -61,6 +63,15 @@ const routes = [
         }
       ]
       },
+      {
+        path: '/blog/:id' ,
+        name: 'BlogsDetails',
+        component: BlogsDetails,
+        beforeEnter: requireAuth,
+        props:true
+
+      }
+
     
       
     ]

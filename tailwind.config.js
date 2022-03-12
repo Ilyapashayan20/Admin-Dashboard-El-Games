@@ -37,6 +37,7 @@ module.exports = {
       colors: {
         'blue-el-games': '#131C2E',
         'bluee': '#2563eb',
+        'grey-bg': '#e3e3e4',
       },
       
     },

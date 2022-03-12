@@ -1,6 +1,6 @@
 <template>
 <div class=" ml-9">
-    <h1 class=" text-red-700 mt-4 text-section font-semibold text-center">Cretae About Us</h1>
+    <h1 class=" text-red-700 mt-4 text-section font-semibold text-center">Create About Us</h1>
     
     <div class="mt-10 flex">
         <AboutCreate />

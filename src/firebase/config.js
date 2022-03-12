@@ -1,6 +1,8 @@
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore'
 import 'firebase/compat/auth'
+import 'firebase/compat/storage'
+
 import { ref,onUnmonted } from 'vue'
 
 const firebaseConfig = {
@@ -16,11 +18,19 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 const projectAuth = firebase.auth()
+const projectFirestore = firebase.firestore()
+
+const projectStorage = firebase.storage()
+
 const db = firebase.firestore()
 const timestamp = firebase.firestore.FieldValue.serverTimestamp
 const aboutCollection = db.collection('abouts')
 
-export { projectAuth,  timestamp }
+export { projectAuth, projectFirestore,  timestamp ,projectStorage }
+
+
+
+
 
 export const createAbout = about =>{
   return aboutCollection.add(about)

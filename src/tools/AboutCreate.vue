@@ -1,5 +1,5 @@
 <template>
-  <form class="s rounded w-114 " @submit.prevent="onSubmit">
+  <form  class="s rounded w-114 bg-white " @submit.prevent="onSubmit">
     
       <div class=" flex flex-col items-start  p-10 rounded">
             <div class="flex flex-col items-center mb-8">
@@ -37,9 +37,6 @@ export default {
 </script>
 
 <style>
-.s{
-    -webkit-box-shadow: 0px 0px 42px 1px #131C2E; 
-box-shadow: 0px 0px 42px 1px #131C2E;
-}
+
 
 </style>
