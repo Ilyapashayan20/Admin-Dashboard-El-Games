@@ -12,10 +12,7 @@ module.exports = {
         p:['16px','150%'],
         
     },
-    maxWidth: {
-      '220px': '360px',
-      'full': '100%',
-    },
+  
   
     borderRadius: {
       'none': '0',
@@ -26,6 +23,7 @@ module.exports = {
       'lg': '0.5rem',
       'full': '9999px',
       'large': '12px',
+      '3xl': '24px',
     },
     extend: {
       zIndex: {
@@ -34,10 +32,17 @@ module.exports = {
       width: {
         '114': '29.5rem',
       },
+      height: {
+        'game-img': '25.625rem',
+      },
       colors: {
         'blue-el-games': '#131C2E',
         'bluee': '#2563eb',
         'grey-bg': '#e3e3e4',
+      },
+      backgroundImage: {
+        'iphone': "url('../images/games/iphone.svg')",
+       
       },
       
     },

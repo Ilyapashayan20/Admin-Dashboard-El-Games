@@ -26,7 +26,6 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import useStorage from '@/composables/useStorage'
 import useCollection from '@/composables/useCollection'
-import getUser from '@/composables/getUser'
 import { timestamp } from '@/firebase/config'
 
 export default {
@@ -35,7 +34,7 @@ export default {
     const { error, addDoc } = useCollection('blogs')
     const router = useRouter()
 
-    const { user } = getUser()
+
     const title = ref('')
     const description = ref('')
     const file = ref(null)
@@ -48,7 +47,7 @@ export default {
         const res = await addDoc({
           title: title.value,
           description: description.value,
-          userId: user.value.uid,
+          
           imgUrl: url.value,
           filePath: filePath.value, 
           blogtype: [],
