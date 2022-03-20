@@ -3,7 +3,7 @@
         <div class="modal" >
          <form class="s h-96 rounded mx-auto relative   py-5 px-7  flex flex-col bg-white" @submit.prevent="handleSubmit">
              <i class="material-icons absolute right-0 top-0  cursor-pointer text-black"   @click="CloseModal">close</i>
-      <h4 class=" mb-3 text-base font-medium">Create a New Blog</h4>
+      <h4 class=" mb-3 text-base font-medium">Create a New Post</h4>
       <input class=" border-b font-normal border-solid border-blue-el-games focus:outline-none focus:border-red-700 pb-2" type="text" required placeholder="Blog title" v-model="title">
       <textarea class="block  h-28 my-5   font-normal text-black bg-white bg-clip-padding
           border-b border-solid border-blue-el-games  transition ease-in-out m-0 focus:border-red-700 focus:outline-none" required placeholder="Blog description..." v-model="description"></textarea>

@@ -46,19 +46,8 @@ import getCollection from '../composables/getCollection'
 export default {
     setup(){
         const {error,documents} = getCollection('games')
-
-
-
-
-      
-
-        
-
-
         return{error,documents,}
-
     }
-
 }
 </script>
 

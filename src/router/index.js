@@ -11,11 +11,13 @@ import BlogsDetails from '../playlist/BlogsDetails.vue'
 
 
 
+
 const requireAuth = (to,from,next) =>{
- let user = projectAuth.currentUser
-  if(!user){
+ let s = projectAuth.currentUser
+  if(!s){
     next({ name: 'Home'} )
   }
+ 
   else{
     next()
   }

@@ -2,7 +2,7 @@
   <CreteBlog v-if="showModal"  @close="toggleModal"  />
  
     <div class="scroll w-114 min-w-full max-h-96 rounded overflow-y-scroll bg-white py-5 px-3 flex flex-col">
-        <div class="flex justify-between items-center"><h1  class=" text-sm font-medium ">Creat Blog</h1> <i class="material-icons bg-grey-bg rounded p-1  cursor-pointer text-black"  @click="toggleModal">add</i> </div>
+        <div class="flex justify-between items-center"><h1  class=" text-sm font-medium ">Creat Post</h1> <i class="material-icons bg-grey-bg rounded p-1  cursor-pointer text-black"  @click="toggleModal">add</i> </div>
 
 
 
@@ -22,6 +22,7 @@
 <script>
 import getCollection from '../composables/getCollection'
 import CreteBlog from '../playlist/CreateBlog.vue'
+
 export default {
   
     components: {CreteBlog},
@@ -38,11 +39,7 @@ methods:{
 },
   setup(){
         const {error,documents} = getCollection('blogs')
-
-        
-
-
-        return{error,documents}
+        return{error,documents,}
 
     }
 }
